@@ -49,7 +49,7 @@ class ACMOJClient:
         url = f"{self.api_base}{endpoint}"
         try:
             if method.upper() == "GET":
-                response = requests.get(url, headers=self.headers, params=params, timeout=10)
+                response = requests.get(url, headers=self.headers, params=params, timeout=60)
             elif method.upper() == "POST":
                 response = requests.post(url, headers=self.headers, data=data, timeout=10)
             else:
